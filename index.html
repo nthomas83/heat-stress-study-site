@@ -3,102 +3,128 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Heat Stress Study Instructions</title>
+  <title>Heat Stress Study</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      background-color: #f8f8f8;
-    }
-    header, section {
-      padding: 20px;
-      background: white;
-      margin: 20px auto;
-      max-width: 800px;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #fffde7, #ffecb3);
     }
     header {
-      background-color: #005587;
+      background: #ff9800;
       color: white;
+      padding: 20px;
+      text-align: center;
+      background-image: url('https://cdn-icons-png.flaticon.com/512/869/869869.png');
+      background-repeat: no-repeat;
+      background-position: right 20px center;
+      background-size: 60px;
     }
-    h1, h2 {
-      margin-top: 0;
+    header h1 {
+      margin: 0;
     }
-    ul {
-      padding-left: 20px;
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #f57c00;
+    }
+    nav button {
+      background: none;
+      border: none;
+      color: white;
+      padding: 14px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    nav button:hover {
+      background-color: #ef6c00;
+    }
+    .tab-content {
+      display: none;
+      max-width: 800px;
+      margin: 20px auto;
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .tab-content.active {
+      display: block;
     }
     a {
-      color: #005587;
-      word-break: break-all;
+      color: #e65100;
     }
     .highlight {
-      background-color: #eef;
+      background-color: #fff3e0;
       padding: 10px;
-      border-left: 4px solid #005587;
+      border-left: 4px solid #fb8c00;
     }
   </style>
+  <script>
+    function showTab(tabId) {
+      const tabs = document.querySelectorAll('.tab-content');
+      tabs.forEach(tab => tab.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+    }
+    window.onload = () => showTab('tab1');
+  </script>
 </head>
 <body>
   <header>
     <h1>Heat Stress Pilot Study</h1>
-    <p>Step-by-step guide for study participants</p>
+    <p>Guidelines and Instructions for Participants</p>
   </header>
 
-  <section>
+  <nav>
+    <button onclick="showTab('tab1')">Data Collection Instructions</button>
+    <button onclick="showTab('tab2')">Data Export Procedures</button>
+    <button onclick="showTab('tab3')">Additional Resources</button>
+  </nav>
+
+  <div id="tab1" class="tab-content">
     <h2>1. Consent and Enrollment</h2>
     <ul>
-      <li>Scan the QR code or visit <a href="https://redcap.vumc.org/surveys/">https://redcap.vumc.org/surveys/</a></li>
-      <li>Enter access code: <strong>RMY44FRDX</strong></li>
+      <li>Scan QR code or go to <a href="https://redcap.vumc.org/surveys/">https://redcap.vumc.org/surveys/</a></li>
+      <li>Access Code: <strong>RMY44FRDX</strong></li>
     </ul>
-  </section>
 
-  <section>
     <h2>2. Set Up Your Fitbit</h2>
     <ul>
-      <li>Create a Fitbit account</li>
-      <li>Download the Fitbit app and follow setup instructions</li>
-      <li>Check your email for a secure NeuroUX access link</li>
-      <li>Use this link to authorize Fitbit data sharing</li>
-      <li>Wear the Fitbit daily during the study</li>
+      <li>Create a Fitbit account and download the app</li>
+      <li>Watch for a secure NeuroUX email link to authorize data sharing</li>
+      <li>Wear the Fitbit daily during study period</li>
     </ul>
-  </section>
 
-  <section>
-    <h2>3. Study Equipment Setup</h2>
+    <h2>3. Daily Data Collection</h2>
+    <div class="highlight">
+      <p><strong>Session Survey:</strong> Log ear temp, environment temp, time, activity</p>
+      <p>Survey Link: <a href="https://redcap.vumc.org/surveys/">REDCap</a> | Code: <strong>NRCEXMAY7</strong></p>
+      <p><strong>End-of-Day Survey:</strong> Report symptoms and comfort</p>
+      <p>Survey Link: <a href="https://redcap.vumc.org/surveys/">REDCap</a> | Code: <strong>CAF88KWMA</strong></p>
+    </div>
+  </div>
+
+  <div id="tab2" class="tab-content">
+    <h2>Data Export Procedures</h2>
+    <ul>
+      <li>You will receive a closeout email with:</li>
+      <ul>
+        <li>Equipment return instructions</li>
+        <li>How to upload EDA data to REDCap</li>
+        <li>Notification about Fitbit data sharing access being revoked</li>
+      </ul>
+    </ul>
+  </div>
+
+  <div id="tab3" class="tab-content">
+    <h2>Additional Resources</h2>
     <ul>
       <li><a href="https://documents.4rgos.it/v1/static/1153705_R_D001">Fitbit Setup Manual</a></li>
-      <li>Thermometer: Follow <em>Thermometer Experimental Instructions.docx</em></li>
-      <li>Air Monitor: Follow <em>GoveeLife Experimental Instructions.docx</em></li>
+      <li>Thermometer: Refer to <em>Thermometer Experimental Instructions.docx</em></li>
+      <li>Air Monitor: Refer to <em>GoveeLife Experimental Instructions.docx</em></li>
+      <li>Email questions to: <a href="mailto:najma.c.thomas@vanderbilt.edu">najma.c.thomas@vanderbilt.edu</a></li>
     </ul>
-  </section>
-
-  <section>
-    <h2>4. Daily Data Collection</h2>
-    <div class="highlight">
-      <p><strong>Session Survey:</strong> Log ear temperature, environmental temp, timestamp, and activity type.</p>
-      <p>Survey Link: <a href="https://redcap.vumc.org/surveys/">https://redcap.vumc.org/surveys/</a> | Access Code: <strong>NRCEXMAY7</strong></p>
-      <br />
-      <p><strong>End-of-Day Survey:</strong> Record heat stress experiences and symptoms.</p>
-      <p>Survey Link: <a href="https://redcap.vumc.org/surveys/">https://redcap.vumc.org/surveys/</a> | Access Code: <strong>CAF88KWMA</strong></p>
-    </div>
-  </section>
-
-  <section>
-    <h2>5. End of Study Closeout</h2>
-    <ul>
-      <li>You will receive a closeout email with instructions</li>
-      <li>Includes equipment drop-off and EDA data upload guidance</li>
-      <li>Fitbit data sharing access will be revoked</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Questions?</h2>
-    <p>Email: <a href="mailto:najma.c.thomas@vanderbilt.edu">najma.c.thomas@vanderbilt.edu</a></p>
-  </section>
+  </div>
 </body>
 </html>
 
