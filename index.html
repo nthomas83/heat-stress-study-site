@@ -11,7 +11,7 @@
       background: linear-gradient(to bottom, #fffde7, #ffecb3);
     }
     header {
-      background: #ff9800;
+      background: #e65100;
       color: white;
       padding: 20px;
       text-align: center;
@@ -25,8 +25,9 @@
     }
     nav {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
-      background-color: #f57c00;
+      background-color: #bf360c;
     }
     nav button {
       background: none;
@@ -37,7 +38,7 @@
       cursor: pointer;
     }
     nav button:hover {
-      background-color: #ef6c00;
+      background-color: #d84315;
     }
     .tab-content {
       display: none;
@@ -66,7 +67,7 @@
       tabs.forEach(tab => tab.classList.remove('active'));
       document.getElementById(tabId).classList.add('active');
     }
-    window.onload = () => showTab('tab1');
+    window.onload = () => showTab('tab0');
   </script>
 </head>
 <body>
@@ -76,10 +77,28 @@
   </header>
 
   <nav>
+    <button onclick="showTab('tab0')">Background</button>
+    <button onclick="showTab('tab00')">Experiment Set-Up</button>
     <button onclick="showTab('tab1')">Data Collection Instructions</button>
     <button onclick="showTab('tab2')">Data Export Procedures</button>
     <button onclick="showTab('tab3')">Additional Resources</button>
   </nav>
+
+  <div id="tab0" class="tab-content">
+    <h2>Background</h2>
+    <p>This study explores how working in high-heat environments affects individuals and aims to develop strategies to reduce heat-related health risks and improve safety practices for exposed workers.</p>
+  </div>
+
+  <div id="tab00" class="tab-content">
+    <h2>Experiment Set-Up</h2>
+    <ul>
+      <li>Wear the provided Fitbit Sense 2 watch.</li>
+      <li>Log your activities using the Fitbit app.</li>
+      <li>Use a tympanic ear thermometer to take your temperature.</li>
+      <li>Monitor environmental conditions using the GoveeLife Air Quality Monitor.</li>
+      <li>Complete structured surveys after each session and at the end of the day.</li>
+    </ul>
+  </div>
 
   <div id="tab1" class="tab-content">
     <h2>1. Consent and Enrollment</h2>
