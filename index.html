@@ -48,7 +48,7 @@
       border-radius: 8px;
       padding: 20px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      text-align: center;
+      text-align: left;
     }
     .tab-content.active {
       display: block;
@@ -69,7 +69,7 @@
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
     h3 {
-      text-align: left;
+      margin-top: 30px;
     }
   </style>
   <script>
@@ -95,18 +95,9 @@
     <button onclick="showTab('tab3')">Additional Resources</button>
   </nav>
 
-  <div id="tab0" class="tab-content">
-    <h2>Welcome to the Heat Stress Study</h2>
-    <p>Thank you for participating in our research study! Your involvement will help improve the safety and well-being of people working in high-heat environments.</p>
-    <img class="heat-image" src="https://cdn-icons-png.flaticon.com/512/3103/3103473.png" alt="Thermometer representing heat stress" />
-    <p>This study looks at how extreme temperatures affect people like construction, maintenance, and maritime workers by analyzing data collected through smartwatches.</p>
-    <p>Heat stress happens when the body takes on more heat than it can release. When this happens for too long, it can lead to heat-related illnesses like cramps, exhaustion, or even heat stroke.</p>
-    <p>We’ll use data like heart rate, skin temperature, and sweat response to understand how heat affects you on the job. All data is anonymous and helps us design better ways to keep people safe in the heat.</p>
-    <p>Our goal is to identify high-risk conditions and develop smarter strategies to reduce heat-related risks at work.</p>
-  </div>
-
   <div id="tab00" class="tab-content">
     <h2>Experiment Set-Up</h2>
+
     <h3>1. Fitbit Sense 2 Smartwatch</h3>
     <ul>
       <li>Download the Fitbit app from the App Store (iOS) or Google Play Store (Android).</li>
@@ -114,12 +105,52 @@
       <li>Turn on your Fitbit Sense 2 and follow the in-app pairing instructions.</li>
       <li>Allow permissions for heart rate, EDA, temperature, and sleep tracking.</li>
     </ul>
+    <p><strong>Fitbit Setup Video:</strong></p>
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/HKU5P-3i9_0" title="Fitbit Setup Video" frameborder="0" allowfullscreen></iframe>
+
+    <h4>Step 3: Re-Pair and Enable Required Settings</h4>
+    <p><a href="https://drive.google.com/file/d/1HsCvyuPkpJ6XrfFUTbqMoBqP8Iya3Zcz/view?usp=sharing" target="_blank">Video for Settings Set-Up</a></p>
+    <ul>
+      <li><strong>Sleep and Skin Temperature</strong>
+        <ul>
+          <li>Go to the Today tab in the Fitbit app.</li>
+          <li>Tap the pencil/edit icon to customize visible cards.</li>
+          <li>Turn on "Sleep" and "Body Temperature" cards.</li>
+          <li>Wear the device overnight for at least 3 nights to collect data.</li>
+        </ul>
+      </li>
+      <li><strong>EDA and Stress Tracking</strong>
+        <ul>
+          <li>Go to Settings > Stress & Mindfulness in the app.</li>
+          <li>Turn on "Track body responses."</li>
+          <li>Leave "Body response notifications" off if not needed.</li>
+        </ul>
+      </li>
+      <li><strong>Heart Rate and HRV</strong>
+        <ul>
+          <li>Ensure the Heart Rate card is visible on the Today tab.</li>
+          <li>HRV is measured automatically overnight.</li>
+        </ul>
+      </li>
+      <li><strong>System Permissions</strong>
+        <ul>
+          <li>Enable Bluetooth, motion & fitness data, and background app refresh or physical activity access.</li>
+        </ul>
+      </li>
+      <li><strong>Participant Instructions</strong>
+        <ul>
+          <li>Wear the Fitbit snugly on your wrist during sleep for at least 3 nights.</li>
+          <li>Avoid removing the device unless necessary.</li>
+          <li>Open the Fitbit app daily to sync data.</li>
+        </ul>
+      </li>
+    </ul>
 
     <h3>2. GoveeLife Smart Air Quality Monitor</h3>
     <ul>
       <li>Download the Govee Home app from the App Store or Google Play Store.</li>
       <li>Create or log into your Govee account.</li>
-      <li>Power on the air monitor and make sure Bluetooth is enabled on your phone.</li>
+      <li>Power on the air monitor and ensure Bluetooth is enabled on your phone.</li>
       <li>Use the app to find and connect to the device, then follow prompts to finalize setup.</li>
     </ul>
 
@@ -131,54 +162,8 @@
       <li>Follow the app instructions to sync and store temperature readings.</li>
     </ul>
   </div>
-
-  <div id="tab1" class="tab-content">
-    <h2>1. Consent and Enrollment</h2>
-    <ul>
-      <li>Scan QR code or go to <a href="https://redcap.vumc.org/surveys/">https://redcap.vumc.org/surveys/</a></li>
-      <li>Access Code: <strong>RMY44FRDX</strong></li>
-    </ul>
-
-    <h2>2. Set Up Your Fitbit</h2>
-    <ul>
-      <li>Create a Fitbit account and download the app</li>
-      <li>Watch for a secure NeuroUX email link to authorize data sharing</li>
-      <li>Wear the Fitbit daily during study period</li>
-    </ul>
-
-    <h2>3. Daily Data Collection</h2>
-    <div class="highlight">
-      <p><strong>Session Survey:</strong> Log ear temp, environment temp, time, activity</p>
-      <p>Survey Link: <a href="https://redcap.vumc.org/surveys/">REDCap</a> | Code: <strong>NRCEXMAY7</strong></p>
-      <p><strong>End-of-Day Survey:</strong> Report symptoms and comfort</p>
-      <p>Survey Link: <a href="https://redcap.vumc.org/surveys/">REDCap</a> | Code: <strong>CAF88KWMA</strong></p>
-    </div>
-  </div>
-
-  <div id="tab2" class="tab-content">
-    <h2>Data Export Procedures</h2>
-    <ul>
-      <li>You will receive a closeout email with:</li>
-      <ul>
-        <li>Equipment return instructions</li>
-        <li>How to upload EDA data to REDCap</li>
-        <li>Notification about Fitbit data sharing access being revoked</li>
-      </ul>
-    </ul>
-  </div>
-
-  <div id="tab3" class="tab-content">
-    <h2>Additional Resources</h2>
-    <ul>
-      <li><a href="https://documents.4rgos.it/v1/static/1153705_R_D001">Fitbit Setup Manual</a></li>
-      <li>Thermometer: Refer to <em>Thermometer Experimental Instructions.docx</em></li>
-      <li>Air Monitor: Refer to <em>GoveeLife Experimental Instructions.docx</em></li>
-      <li>Email questions to: <a href="mailto:najma.c.thomas@vanderbilt.edu">najma.c.thomas@vanderbilt.edu</a></li>
-    </ul>
-  </div>
 </body>
 </html>
-
 
 
 <!-- Rebuild trigger -->
