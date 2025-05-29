@@ -75,6 +75,48 @@
     ul {
       padding-left: 20px;
     }
+    ul {
+  padding-left: 20px;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  padding: 14px 20px;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    background-color: #a63d00;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #a63d00;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  nav button {
+    text-align: left;
+    padding: 14px;
+    width: 100%;
+    border-top: 1px solid #cc5200;
+  }
+}
   </style>
   <script>
     function showTab(tabId) {
@@ -92,11 +134,14 @@
   </header>
 
   <nav>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <div id="nav-links" class="nav-links">
     <button onclick="showTab('tab0')">Background</button>
     <button onclick="showTab('tab00')">Equipment Set-Up</button>
     <button onclick="showTab('tab1')">Data Collection Instructions</button>
     <button onclick="showTab('tab2')">Data Export Procedures</button>
     <button onclick="showTab('tab3')">Additional Resources</button>
+  </div>
   </nav>
     <div id="tab0" class="tab-content">
   <div style="text-align: center;">
@@ -241,6 +286,11 @@
       </li>
     </ul>
   </div>
+  <script>
+    function toggleMenu() {
+      document.getElementById('nav-links').classList.toggle('active');
+    }
+  </script>
 </body>
 </html>
 
