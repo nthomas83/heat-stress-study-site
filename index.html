@@ -53,6 +53,9 @@
     .tab-content.active {
       display: block;
     }
+    .tab-content h2 {
+      text-align: center;
+    }
     a {
       color: #cc4c00;
     }
@@ -61,15 +64,15 @@
       padding: 10px;
       border-left: 4px solid #fb8c00;
     }
-    .heat-image {
-      display: block;
-      margin: 30px auto;
-      max-width: 200px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    iframe {
+      width: 100%;
+      height: 315px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border: none;
     }
-    h3 {
-      margin-top: 30px;
+    ul {
+      padding-left: 20px;
     }
   </style>
   <script>
@@ -78,7 +81,7 @@
       tabs.forEach(tab => tab.classList.remove('active'));
       document.getElementById(tabId).classList.add('active');
     }
-    window.onload = () => showTab('tab0');
+    window.onload = () => showTab('tab00');
   </script>
 </head>
 <body>
@@ -89,77 +92,71 @@
 
   <nav>
     <button onclick="showTab('tab0')">Background</button>
-    <button onclick="showTab('tab00')">Experiment Set-Up</button>
+    <button onclick="showTab('tab00')">Equipment Set-Up</button>
     <button onclick="showTab('tab1')">Data Collection Instructions</button>
     <button onclick="showTab('tab2')">Data Export Procedures</button>
     <button onclick="showTab('tab3')">Additional Resources</button>
   </nav>
 
   <div id="tab00" class="tab-content">
-    <h2>Experiment Set-Up</h2>
+    <h2>Equipment Set-Up</h2>
 
-    <h3>1. Fitbit Sense 2 Smartwatch</h3>
+    <h3>Fitbit Sense 2 Setup and Data Collection Instructions</h3>
+
+    <h4>1. Initial Setup</h4>
+    <p>Follow the steps below to pair your Fitbit Sense 2 and enable required permissions.</p>
+    <p><strong>📹 Fitbit Setup Video:</strong></p>
+    <iframe src="https://www.youtube.com/embed/HKU5P-3i9_0" title="Fitbit Setup Video" allowfullscreen></iframe>
+
     <ul>
       <li>Download the Fitbit app from the App Store (iOS) or Google Play Store (Android).</li>
-      <li>Create or log into your Fitbit account in the app.</li>
-      <li>Turn on your Fitbit Sense 2 and follow the in-app pairing instructions.</li>
-      <li>Allow permissions for heart rate, EDA, temperature, and sleep tracking.</li>
+      <li>Create a Fitbit account or log into an existing one.</li>
+      <li>Turn on your Fitbit Sense 2 and follow the in-app instructions to pair it with your phone.</li>
+      <li>Allow all necessary permissions for:
+        <ul>
+          <li>Heart Rate</li>
+          <li>EDA (electrodermal activity)</li>
+          <li>Skin Temperature</li>
+          <li>Sleep Tracking</li>
+        </ul>
+      </li>
     </ul>
-    <p><strong>Fitbit Setup Video:</strong></p>
-    <iframe width="100%" height="315" src="https://www.youtube.com/embed/HKU5P-3i9_0" title="Fitbit Setup Video" frameborder="0" allowfullscreen></iframe>
 
-    <h4>Step 3: Re-Pair and Enable Required Settings</h4>
-    <p><a href="https://drive.google.com/file/d/1HsCvyuPkpJ6XrfFUTbqMoBqP8Iya3Zcz/view?usp=sharing" target="_blank">Video for Settings Set-Up</a></p>
+    <h4>2. Enable Required Settings</h4>
+    <p>These settings must be turned on to ensure accurate data collection.</p>
+    <p><strong>📹 Settings Set-Up Video:</strong></p>
+    <iframe src="https://drive.google.com/file/d/1HsCvyuPkpJ6XrfFUTbqMoBqP8Iya3Zcz/preview" title="Settings Set-Up Video" allowfullscreen></iframe>
+
     <ul>
-      <li><strong>Sleep and Skin Temperature</strong>
+      <li><strong>Sleep & Skin Temperature</strong>
         <ul>
-          <li>Go to the Today tab in the Fitbit app.</li>
+          <li>Open the Fitbit app and go to the Today tab.</li>
           <li>Tap the pencil/edit icon to customize visible cards.</li>
-          <li>Turn on "Sleep" and "Body Temperature" cards.</li>
-          <li>Wear the device overnight for at least 3 nights to collect data.</li>
+          <li>Make sure "Sleep" and "Body Temperature" cards are turned on.</li>
+          <li>Wear the device overnight for at least 3 nights to establish a temperature baseline.</li>
         </ul>
       </li>
-      <li><strong>EDA and Stress Tracking</strong>
+      <li><strong>EDA & Stress Tracking</strong>
         <ul>
-          <li>Go to Settings > Stress & Mindfulness in the app.</li>
+          <li>Navigate to Settings > Stress & Mindfulness in the app.</li>
           <li>Turn on "Track body responses."</li>
-          <li>Leave "Body response notifications" off if not needed.</li>
+          <li>You can keep "Body response notifications" off if not needed.</li>
         </ul>
       </li>
-      <li><strong>Heart Rate and HRV</strong>
+      <li><strong>Heart Rate & HRV</strong>
         <ul>
-          <li>Ensure the Heart Rate card is visible on the Today tab.</li>
-          <li>HRV is measured automatically overnight.</li>
+          <li>Confirm the Heart Rate card is visible on the Today tab.</li>
+          <li>HRV is tracked automatically overnight when worn during sleep.</li>
         </ul>
       </li>
       <li><strong>System Permissions</strong>
         <ul>
-          <li>Enable Bluetooth, motion & fitness data, and background app refresh or physical activity access.</li>
+          <li>On your phone, ensure the following are enabled:</li>
+          <li>Bluetooth</li>
+          <li>Motion & Fitness Data</li>
+          <li>Background App Refresh (iOS) or Physical Activity Access (Android)</li>
         </ul>
       </li>
-      <li><strong>Participant Instructions</strong>
-        <ul>
-          <li>Wear the Fitbit snugly on your wrist during sleep for at least 3 nights.</li>
-          <li>Avoid removing the device unless necessary.</li>
-          <li>Open the Fitbit app daily to sync data.</li>
-        </ul>
-      </li>
-    </ul>
-
-    <h3>2. GoveeLife Smart Air Quality Monitor</h3>
-    <ul>
-      <li>Download the Govee Home app from the App Store or Google Play Store.</li>
-      <li>Create or log into your Govee account.</li>
-      <li>Power on the air monitor and ensure Bluetooth is enabled on your phone.</li>
-      <li>Use the app to find and connect to the device, then follow prompts to finalize setup.</li>
-    </ul>
-
-    <h3>3. Braun ThermoScan 7 Connect</h3>
-    <ul>
-      <li>Download the Braun Health App from the App Store or Google Play Store.</li>
-      <li>Create or log into your Braun account.</li>
-      <li>Turn on the thermometer and enable Bluetooth on your phone.</li>
-      <li>Follow the app instructions to sync and store temperature readings.</li>
     </ul>
   </div>
 </body>
